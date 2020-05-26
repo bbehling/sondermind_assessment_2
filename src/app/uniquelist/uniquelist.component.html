@@ -1,0 +1,24 @@
+<div>
+  <input
+    (keyup)="onKeyUp($event)"
+    data-test="assembly-add-item"
+    class="item-input"
+    [(ngModel)]="item"
+  />
+  <input type="button" (click)="addItem()" value="Add Item" class="add-item" />
+  <input
+    type="button"
+    (click)="removeItem()"
+    value="Remove Item"
+    class="remove-item"
+  />
+  <input
+    type="button"
+    (click)="clearItems()"
+    value="Clear Items"
+    class="clear-list"
+  />
+  <ul *ngFor="let item of items" class="items">
+    <li class="listFont">{{ item }}</li>
+  </ul>
+</div>
